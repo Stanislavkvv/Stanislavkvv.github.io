@@ -15,6 +15,9 @@
 body {
     min-height: 100vh;
     overflow-x: hidden;
+    padding-top: 5.4rem;
+    display: flex;
+    flex-direction: column;
 }
 body.viewer{
     overflow: hidden;
@@ -33,7 +36,7 @@ header{
 }
 header .container nav.navbar{
     display: flex;
-    padding: 1rem 0;
+    padding: .6rem;
 }
 header .container nav.navbar a.navbar-brand{
     padding: 0;
@@ -91,6 +94,10 @@ header .container nav.navbar .navbar-menu .callback strong{
     color: var(--color-3);
 }   
 
+main{
+    flex: 1 1 auto;
+}
+
 section.slider .sliderContainer{
     max-width: 120rem;
     margin: 0 auto;
@@ -99,7 +106,6 @@ section.slider .slideshow{
     position: relative;
     min-height: 38rem;
     display: flex;
-    margin-top: 4.2rem;
 }
 section.slider .slideshow .back{
     background-color: rgba(0, 0, 0, .4);
@@ -204,11 +210,132 @@ section.slider .slideshow .container .sliderBlock ul.slidesText li.active a:hove
     background-color: black;
 }
 
-/* !!!тут можеш писати!!! */
+section.about .container{
+    display: flex;
+    flex-direction: column;
+    padding: 5.5rem 0 0rem;
+}
+section.about .container h1{
+    font-size: 2rem;
+    font-family: var(--font-2);
+    font-weight: 300;
+    text-align: center;
+    line-height: 3.3rem;
+    margin-bottom: 1.7rem;
+}
+section.about .container .info{
+    display: flex;
+    align-items: center;
+}
+section.about .container .info .photo{
+    margin-right: 2rem;
+    flex: 1;
+}
+section.about .container .info .photo img{
+    width: 100%;
+}
+section.about .container .info p.text{
+    flex: 1;
+    font-family: var(--font-3);
+    font-weight: 300;   
+    font-size: 1.1rem;
+}
+
+section.services .container{
+    display: flex;
+    padding-top: 5.6rem;
+    flex-direction: column;
+}
+section.services .container h1{
+    font-family: var(--font-2);
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+section.services .container .variants{
+    display: flex;
+    flex-direction: column;
+}
+section.services .container .variants .variantsRow{
+    display: flex;
+    justify-content: center;
+}
+section.services .container .variants .variant{
+    display: flex;
+    width: 33%;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-right: 1rem;
+}
+section.services .container .variants .variant:last-child{
+    margin-right: 0;
+}
+section.services .container .variants .variant .photo{
+    height: 15.6rem;
+    overflow: hidden;
+    position: relative;
+    transition: all .7s ease;
+}
+section.services .container .variants .variant .photo:before{
+    content: "";
+    background-color: rgba(255, 255, 255, .3);
+    width: 100%;
+    height: 100%;
+    top: -100%;
+    left: 0;
+    position: absolute;
+    transition: all .5s ease;
+    z-index: 2;
+}
+section.services .container .variants .variant .photo:hover:before{
+    top: 0; 
+}
+section.services .container .variants .variant .photo:after{
+    content: "";
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-2);
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    z-index: 1;
+    transition: all .5s ease;
+}
+section.services .container .variants .variant .photo:hover:after{
+    bottom: 0;
+}
+section.services .container .variants .variant .photo img{
+    width: 100%;
+    object-fit: cover;
+    transition: all .5s ease;
+}
+section.services .container .variants .variant .photo:hover img{
+    transform: translate(0,-5px);
+}
+section.services .container .variants .variant a.title{
+    border-top: 5px solid var(--color-2);
+    text-decoration: none;
+    margin: 0rem 1rem .2rem;
+    padding-top: 1rem;
+    font-family: var(--font-2);
+    color: var(--color-2);
+    font-weight: 700;
+    font-size: 1.3rem;
+    transform: translate(0,-5px);
+    z-index: 1;
+}
+section.services .container .variants .variant p.desc{
+    padding: 0 1rem 1rem;
+    font-family: var(--font-3);
+    font-weight: 300;
+    font-size: .9rem;
+    line-height: 1.5rem;
+}
 
 section.gallery{
     background-color: var(--color-3);
-    padding-top: 2.5rem;
+    padding-top: 3.5rem;
 }
 section.gallery .container{
     display: flex;
@@ -230,7 +357,6 @@ section.gallery .container p{
 }
 section.gallery .container .gallery{
     width: 100%;
-    margin-top: 2rem;
     padding: .3rem;
     display: grid;
     grid-template-columns: repeat(4,1fr);
@@ -239,9 +365,10 @@ section.gallery .container .gallery{
 section.gallery .container .gallery .img{
     position: relative;
     overflow: hidden;
+    max-height: 18.75rem;
 }
 section.gallery .container .gallery .img img{
-    width: 100%;
+    object-fit: cover;
     transition: all .4s ease;
 }
 section.gallery .container .gallery .img:hover{
@@ -304,7 +431,7 @@ section.gallery .viewer .viewer__block{
     align-items: center;
 }
 section.gallery .viewer .viewer__block img{
-    min-height: 90%;
+    height: 90%;
     transition: all .7s ease;
 }
 section.gallery .viewer .viewer__block button.close,
@@ -340,7 +467,7 @@ section.gallery .viewer .viewer__block .counter{
 }
 
 section.testimonials {
-    padding: 4.5rem 0;
+    padding: 5.5rem 0;
 }
 section.testimonials .container{
     position: relative;
@@ -462,6 +589,105 @@ section.whyWe .container ul.reasons li h1.title{
 section.whyWe .container ul.reasons li .desc{
     grid-area: desc;
 }
+
+section.info .container{
+    padding: 3rem 0;
+    display: flex;
+}
+section.info .container .contacts,
+section.info .container .map{
+    flex: 1;
+}
+section.info .container .contacts{
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+section.info .container h1.title{
+    font-family: var(--font-2);
+    font-weight: 300;
+    font-size: 2rem;
+    text-align: left;
+}
+section.info .container .contacts .info_blocks .info_block{
+    display: flex;
+}
+section.info .container .contacts .info_blocks .info_block .icon{
+    display: flex;
+    justify-content: center;
+    padding: 0 1rem 1rem;
+    font-size: 2rem;
+    color: #838383;
+}
+section.info .container .contacts .info_blocks .info_block .data{
+    margin-bottom: 2rem;
+}
+section.info .container .contacts .info_blocks .info_block .data .data__title{
+    font-family: var(--font-2);
+    font-weight: bold;
+    color: var(--color-2);
+    font-size: 1.3rem;
+}
+section.info .container .contacts .info_blocks .info_block .data .data__desc{
+    font-family: var(--font-3);
+    margin: 0;
+    font-size: .9rem;
+}
+section.info .container .contacts .info_blocks .info_block .data a.data__desc{
+    text-decoration: none;
+    color: var(--color-2);
+    transition: all .4s ease;
+}
+section.info .container .contacts .info_blocks .info_block .data a.data__desc:hover{
+    margin-left: .4rem;
+}
+
+section.galleryPage{
+    background-color: var(--color-1);
+    padding-top: 1.5rem;
+}
+section.galleryPage .container{
+    margin-bottom: .5rem;
+    border-bottom: .25rem solid #b1b1b1;
+}
+section.galleryPage .container .gallery{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+}
+section.galleryPage .container .gallery .img{
+    max-height: 12rem;
+    /* background-image: url("../img/gallery/1.jpg"); */
+    background-position: center;
+    background-size: cover;
+}
+section.galleryPage .container .gallery .img img{
+    opacity: 0;
+}
+
+section.topic{
+    background-image: url("../img/topicBackground.jpeg");
+    background-size: cover;
+    background-position: 50% 80%;
+}
+section.topic .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem 0;
+}
+section.topic .container .title{
+    padding: 2rem 4rem;
+    background-color: rgba(0, 0, 0, .4);
+}
+section.topic .container .title h1{
+    font-family: var(--font-2);
+    font-weight: 400;
+    color: white;
+    font-size: 2rem;
+    padding-bottom: .5rem;
+    border-bottom: 4px solid var(--color-2);
+}
+
 footer{
     background-color: white;
     -webkit-box-shadow: 0px -5px 5px -5px rgba(34, 60, 80, 0.6);
