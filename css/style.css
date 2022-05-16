@@ -33,7 +33,7 @@ header{
 }
 header .container nav.navbar{
     display: flex;
-    padding: 0;
+    padding: 1rem 0;
 }
 header .container nav.navbar a.navbar-brand{
     padding: 0;
