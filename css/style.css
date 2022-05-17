@@ -164,7 +164,7 @@ section.slider .slideshow .container .sliderBlock{
     padding: 2rem 1.5rem;
     background-color: rgba(0, 0, 0, .6);
 }   
-section.slider .slideshow .container .sliderBlock h3{
+section.slider .slideshow .container .sliderBlock h2{
     color: var(--color-2);
     font-size: 1.2rem;
     font-weight: 500;
@@ -182,7 +182,7 @@ section.slider .slideshow .container .sliderBlock ul.slidesText li.active{
     flex-direction: column;
     align-items: flex-start;
 }
-section.slider .slideshow .container .sliderBlock ul.slidesText li.active h1.slogan{
+section.slider .slideshow .container .sliderBlock ul.slidesText li.active .slogan{
     margin: 0;
     display: block;
     font-family: var(--font-2);
@@ -343,7 +343,7 @@ section.gallery .container{
     align-items: center;
     color: var(--color-1);
 }
-section.gallery .container h1{
+section.gallery .container .title{
     font-family: var(--font-2);
     font-weight: 300;
     margin-top: 2rem;
@@ -490,7 +490,7 @@ section.testimonials .container .btns button{
 section.testimonials .container .btns button.noactive{
     color: var(--color-4);
 }
-section.testimonials h1{
+section.testimonials .titleText{
     font-family: var(--font-2);
     font-weight: 300;
     font-size: 2rem;
@@ -516,7 +516,7 @@ section.testimonials .reviews .review i{
     color: var(--color-4);
     font-size: 5rem;
 }
-section.testimonials .reviews .review h1{
+section.testimonials .reviews .review .title{
     font-size: 1.5rem;
     font-weight: bold;
     font-family:var(--font-2);
@@ -543,7 +543,7 @@ section.whyWe .container{
     margin-bottom: .5rem;
     border-bottom: .25rem solid #b1b1b1;
 }
-section.whyWe .container h1{
+section.whyWe .container .titleText{
     font-family: var(--font-2);
     font-weight: 300;
     font-size: 2rem;
@@ -577,7 +577,7 @@ section.whyWe .container ul.reasons li .photo .back{
     height: 2.5rem;
     border-radius: 50%;
 }
-section.whyWe .container ul.reasons li h1.title{
+section.whyWe .container ul.reasons li .title{
     grid-area: title;
     color: var(--color-2);
     margin: .5rem 0;
@@ -603,7 +603,7 @@ section.info .container .contacts{
     display: flex;
     flex-direction: column;
 }
-section.info .container h1.title{
+section.info .container .title{
     font-family: var(--font-2);
     font-weight: 300;
     font-size: 2rem;
@@ -708,7 +708,7 @@ footer .container .menu{
     flex-direction: column;
     align-items: flex-start;
 }
-footer .container h1.head{
+footer .container .head{
     font-family: var(--font-2);
     font-weight: bold;
     font-size: 1rem;
