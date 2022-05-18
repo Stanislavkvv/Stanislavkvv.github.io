@@ -653,7 +653,6 @@ section.galleryPage .container .gallery{
 }
 section.galleryPage .container .gallery .img{
     max-height: 12rem;
-    /* background-image: url("../img/gallery/1.jpg"); */
     background-position: center;
     background-size: cover;
 }
