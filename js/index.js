@@ -85,6 +85,12 @@ function viewerSlider(action){
     })
 }
 
+//displaying gallery images
+const galleryImgs = document.querySelectorAll("section.gallery .container .gallery .img")
+for (let i = 0; i < galleryImgs.length; i++) {
+    galleryImgs[i].style.backgroundImage = `url(./${imgHowBtns[i].querySelector("img").getAttribute("src")})`
+}
+
 
 
 // reviews slider

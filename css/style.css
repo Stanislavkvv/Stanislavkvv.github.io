@@ -365,17 +365,14 @@ section.gallery .container .gallery{
 section.gallery .container .gallery .img{
     position: relative;
     overflow: hidden;
-    max-height: 18.75rem;
+    height: 18.75rem;
+    background-size: cover;
 }
 section.gallery .container .gallery .img img{
-    object-fit: cover;
-    transition: all .4s ease;
+    display: none;
 }
 section.gallery .container .gallery .img:hover{
     cursor: pointer;
-}
-section.gallery .container .gallery .img:hover img{
-    transform: scale(1.1);
 }
 section.gallery .container .gallery .img:after{
     content: "";
@@ -644,7 +641,7 @@ section.info .container .contacts .info_blocks .info_block .data a.data__desc:ho
 
 section.galleryPage{
     background-color: var(--color-1);
-    padding-top: 1.5rem;
+    padding-top: .5rem;
 }
 section.galleryPage .container{
     margin-bottom: .5rem;
