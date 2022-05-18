@@ -594,11 +594,22 @@ section.info .container{
 section.info .container .contacts,
 section.info .container .map{
     flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+section.info .container .map .map_block{
+    flex: 1 1 auto;
+    position: relative;
+}
+section.info .container .map .map_block iframe{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 section.info .container .contacts{
     margin-right: 1rem;
-    display: flex;
-    flex-direction: column;
 }
 section.info .container .title{
     font-family: var(--font-2);
