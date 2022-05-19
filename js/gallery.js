@@ -1,4 +1,9 @@
 "use strict"
+//body settings
+setInterval(()=>{
+    document.body.style.paddingTop = `${document.querySelector("header").offsetHeight}px`
+},1000)
+
 const viewer = document.querySelector("section.galleryPage .viewer")
 const imgHowBtns = document.querySelectorAll("section.galleryPage .container .gallery .img")
 const closeBtn = document.querySelector("section.galleryPage .viewer .viewer__block button.close")
