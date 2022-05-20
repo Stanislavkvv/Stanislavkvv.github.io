@@ -17,11 +17,13 @@ for (let i = 0; i < imgHowBtns.length; i++) {
 }
 imgHowBtns.forEach(item=>{
     item.addEventListener("click",function(){
-        document.body.classList.add("viewer")
-        viewer.classList.add("active")
-        viewer.querySelector("img").setAttribute("src",item.querySelector("img").getAttribute("src"))
-        viewer.querySelector(".counter span").textContent = item.getAttribute("photo")
-        viewerSlide = item.getAttribute("photo");
+        if(window.innerWidth>1024){
+            document.body.classList.add("viewer")
+            viewer.classList.add("active")
+            viewer.querySelector("img").setAttribute("src",item.querySelector("img").getAttribute("src"))
+            viewer.querySelector(".counter span").textContent = item.getAttribute("photo")
+            viewerSlide = item.getAttribute("photo");
+        }
     })
 })
 closeBtn.addEventListener("click",hideViewer)
