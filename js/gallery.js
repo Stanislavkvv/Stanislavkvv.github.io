@@ -24,10 +24,12 @@ imgHowBtns.forEach(item=>{
         viewerSlide = item.getAttribute("photo");
     })
 })
-closeBtn.addEventListener("click",function(){
+closeBtn.addEventListener("click",hideViewer)
+window.addEventListener("resize",hideViewer)
+function hideViewer(){
     document.body.classList.remove("viewer")
     viewer.classList.remove("active")
-})
+}
 prevBtnViewer.addEventListener("click",function(){viewerSlider("-")})
 nextBtnViewer.addEventListener("click",function(){viewerSlider("+")})
 
@@ -54,4 +56,20 @@ function viewerSlider(action){
             viewer.querySelector("img").setAttribute("src",item.querySelector("img").getAttribute("src"))
         }
     })
+}
+
+//toggle header menu
+const toggleHeaderBtn = document.querySelector("header .container nav.navbar .toggle");
+
+toggleHeaderBtn.addEventListener("click",function(){
+    this.classList.toggle("active")
+    document.querySelector("header .container nav.navbar ul.navbar-menu").classList.toggle("active")
+    let navbar = document.querySelector("header .container nav.navbar")
+    navbar.querySelector("ul.navbar-menu").style.top = `${navbar.offsetHeight}px`
+})
+window.addEventListener("scroll",hideToggleMenu)
+window.addEventListener("resize",hideToggleMenu)
+function hideToggleMenu(){
+    toggleHeaderBtn.classList.remove("active")
+    document.querySelector("header .container nav.navbar ul.navbar-menu").classList.remove("active")
 }

@@ -31,7 +31,7 @@ header{
     top:0;
     left: 0;
     width: 100%;
-    z-index: 99;
+    z-index: 9900;
     background-color: var(--color-1); 
 }
 header .container nav.navbar{
@@ -344,6 +344,7 @@ section.gallery .container .title{
     font-weight: 300;
     margin-top: 2rem;
     font-size: 2rem;
+    text-align: center;
 }
 section.gallery .container p{
     text-align: center;
@@ -403,7 +404,7 @@ section.gallery .viewer{
     position: fixed;
     left: 0;
     top: 0;
-    z-index: 100;
+    z-index: 10000;
     width: 100vw;
     height: 100vh;
     background-color: rgba(255, 255, 255, .6);
@@ -468,6 +469,7 @@ section.testimonials .container{
 section.testimonials .container .btns{
     position: absolute;
     display: flex;
+    z-index: 1000;
     justify-content: space-between;
     width: 100%;
     top: 50%;
@@ -492,7 +494,6 @@ section.testimonials .titleText{
 section.testimonials .reviews{
     display: flex;
     margin: 2rem 3rem 0;
-    align-items: center;
     overflow: hidden;
     position: relative;
 }
@@ -501,6 +502,8 @@ section.testimonials .reviews .review{
     min-width: 50%;
     position: relative;
     transition: all .5s ease .2s;
+    display: flex;
+    flex-direction: column;
 }
 section.testimonials .reviews .review i{
     position: absolute;
@@ -522,6 +525,9 @@ section.testimonials .reviews .review p{
 }
 section.testimonials .reviews .review p.text{
     font-weight: 300;
+    display: flex;
+    align-items: center;
+    flex: 1 1 auto;
 }
 section.testimonials .reviews .review p.author{
     font-weight: bold;
@@ -532,7 +538,7 @@ section.whyWe{
     border-top: 1px solid #d8d8d8;
 }
 section.whyWe .container{
-    padding: 3.5rem 0 2rem;
+    padding: 3.5rem 0 0;
     margin-bottom: .5rem;
     border-bottom: .25rem solid #b1b1b1;
 }
@@ -966,3 +972,176 @@ footer .container .menu ul.body li a{
         height: 13rem;
     }
 } 
+@media(max-width:480px){
+    section.gallery .container .title{
+        margin-top: 0;
+        text-align: center;
+    }
+    section.gallery .container p{
+        font-size: .8rem;
+    }
+}
+@media(max-width:320px){
+    section.gallery .container .title{
+        font-size: 1.2rem;
+    }
+}
+@media(min-width:320px) and (max-width:480px){
+    section.gallery .container .title{
+        font-size: 1.5rem;
+    }
+}
+@media(max-width:768px){
+    section.gallery .container .gallery{
+        display: flex;
+        flex-direction: column;
+    }
+    section.gallery .container .gallery .img{
+        display: none;
+    }
+    section.gallery .container .gallery .img:first-child,
+    section.gallery .container .gallery .img:last-child{
+        display: flex;
+    }
+}
+@media(min-width:768px) and (max-width:1024px){
+    section.gallery .container .gallery{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    section.gallery .container .gallery .img{
+        display: none;
+    }
+    section.gallery .container .gallery .img:nth-child(-n+4){
+        display: flex;
+    }
+}
+@media(max-width:1024px){
+    section.gallery .viewer{
+        display: none;
+    }
+    section.testimonials{
+        padding: 4rem 0;
+    }
+    section.testimonials .titleText{
+        font-size: 1.5rem;
+    }
+    section.testimonials .reviews{
+        margin: 2rem 0 0;
+    }
+    section.testimonials .reviews .review i{
+        display: none;
+    }
+    section.testimonials .reviews .review{
+        padding: 0 3rem;
+        min-width: 100%;
+    }
+    section.testimonials .reviews .review p.author{
+        margin-top: 0;
+    }
+}
+@media(max-width:768px){
+    section.testimonials .container .btns{
+        width: 92%;
+    }
+}
+@media(max-width:320px){
+    section.whyWe .container .titleText{
+        font-size: 1.4rem;
+    }
+    section.whyWe .container ul.reasons li .photo{
+        display: none;
+    }
+    section.whyWe .container ul.reasons{
+        grid-gap:0;
+    }
+    footer .container .contact ul.body li{
+        font-size: .9rem;
+    }
+}
+@media(max-width:480px){
+    section.whyWe .container ul.reasons li .title{
+        font-size: 1.2rem;
+    }
+}
+@media(min-width:320px) and (max-width:768px){
+    section.whyWe .container .titleText{
+        font-size: 1.5rem;
+    }
+    section.whyWe .container ul.reasons{
+        grid-gap:.5rem;
+    }
+}
+@media(max-width:1000px){
+    section.whyWe .container ul.reasons{
+        display: flex;
+        flex-direction: column;
+    }
+    section.whyWe .container ul.reasons{
+        padding: 0 1rem;
+    }
+}
+@media(max-width:576px){
+    footer .container{
+        flex-direction: column;
+        padding: 0;
+    }
+    footer .container .info, 
+    footer .container .contact, 
+    footer .container .work, 
+    footer .container .menu{
+        padding: 1rem;
+    }
+}
+@media(min-width:576px) and (max-width:1024px){
+    footer .container{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        padding: 1rem 0;
+    }
+    footer .container .info, 
+    footer .container .contact, 
+    footer .container .work, 
+    footer .container .menu{
+        margin-top: 1rem;
+    }
+}
+@media(min-width:1024px) and (max-width:1440px){
+    footer .container .info, 
+    footer .container .contact, 
+    footer .container .work, 
+    footer .container .menu{
+        padding-right: 1rem;
+    }
+    section.galleryPage .container .gallery{
+        grid-template-columns: repeat(4,1fr);
+    }
+}
+@media(max-width:1440px){
+    section.galleryPage .container .gallery .img{
+        display: flex;
+    }
+}
+@media(max-width:480px){
+    section.info .container .title{
+        font-size: 1.4rem;
+    }
+}
+@media(min-width:480px) and (max-width:768px){
+    section.info .container .title{
+        font-size: 1.6rem;
+    }
+}
+@media(max-width:768px){
+    section.info .container{
+        padding: 1rem 0;
+        flex-direction: column;
+    }
+    section.info .container .title{
+        text-align: center;
+    }
+    section.info .container .map{
+        min-height: 30rem;
+        margin-bottom: 1rem;
+    }
+}
