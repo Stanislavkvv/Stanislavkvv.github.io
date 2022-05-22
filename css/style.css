@@ -395,6 +395,7 @@ section.gallery .container a{
     color: var(--color-1);
     text-decoration: none;
     transition: all .3s ease;
+    text-align: center;
 }
 section.gallery .container a:hover{
     background-color: var(--color-1);
