@@ -462,6 +462,7 @@ section.gallery .viewer .viewer__block .counter{
 
 section.testimonials {
     padding: 5.5rem 0;
+    position: relative;
 }
 section.testimonials .container{
     position: relative;
@@ -1023,6 +1024,9 @@ footer .container .menu ul.body li a{
     section.testimonials{
         padding: 4rem 0;
     }
+    section.testimonials .container{
+        position: static;
+    }
     section.testimonials .titleText{
         font-size: 1.5rem;
     }
@@ -1039,12 +1043,17 @@ footer .container .menu ul.body li a{
     section.testimonials .reviews .review p.author{
         margin-top: 0;
     }
-}
-@media(max-width:768px){
     section.testimonials .container .btns{
-        width: 92%;
+        width: 70%;
+        left:50%;
+        transform:translate(-50%, 0);
+        top: unset;
+        bottom: 0;
     }
 }
+/* @media(max-width:768px){
+    
+} */
 @media(max-width:320px){
     section.whyWe .container .titleText{
         font-size: 1.4rem;
